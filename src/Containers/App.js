@@ -17,13 +17,22 @@ const Wrapper = styled.div`
 //   padding: 2em;
 // `;
 
+
+const StyledPaper = () => {
+  return Paper;
+};
+
 function App() {
   return (
+    // <Wrapper>
+    //   <Paper elevation="3">
+    //     <Header />
+    //     <Body />
+    //   </Paper>
+    // </Wrapper>
     <Wrapper>
-      <Paper elevation={3}>
         <Header />
         <Body />
-      </Paper>
     </Wrapper>
   );
 }

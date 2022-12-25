@@ -5,6 +5,8 @@ import Typography from '@material-ui/core/Typography/index.js';
 import axios from '../api.js';
 import { useScoreCard } from '../hooks/useScoreCard.js';
 
+// const {Typography} = require('@material-ui/core/Typography/index.js');
+
 const Wrapper = styled.section`
   display: flex;
   align-items: center;
@@ -28,10 +30,10 @@ const Header = () => {
 
   return (
     <Wrapper>
-      <Typography variant="h2">ScoreCard DB</Typography>
-      <Button variant="contained" color="secondary" onClick={handleClear}>
+      <Typography.default variant="h2">ScoreCard DB</Typography.default>
+      <Button.default variant="contained" color="secondary" onClick={handleClear}>
         Clear
-      </Button>
+      </Button.default>
     </Wrapper>
   );
 };

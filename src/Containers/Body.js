@@ -84,27 +84,27 @@ const Body = () => {
     <Wrapper>
       <Row>
         {/* Could use a form & a library for handling form data here such as Formik, but I don't really see the point... */}
-        <TextField
+        <TextField.default
           className={classes.input}
           placeholder="Name"
           value={name}
           onChange={handleChange(setName)}
         />
-        <TextField
+        <TextField.default
           className={classes.input}
           placeholder="Subject"
           style={{ width: 240 }}
           value={subject}
           onChange={handleChange(setSubject)}
         />
-        <TextField
+        <TextField.default
           className={classes.input}
           placeholder="Score"
           value={score}
           onChange={handleChange(setScore)}
           type="number"
         />
-        <Button
+        <Button.default
           className={classes.button}
           variant="contained"
           color="primary"
@@ -112,36 +112,36 @@ const Body = () => {
           onClick={handleAdd}
         >
           Add
-        </Button>
+        </Button.default>
       </Row>
       <Row>
-        <FormControl>
-          <FormControl component="fieldset">
-            <RadioGroup
+        <FormControl.default>
+          <FormControl.default component="fieldset">
+            <RadioGroup.default
               row
               value={queryType}
               onChange={handleChange(setQueryType)}
             >
-              <FormControlLabel
+              <FormControlLabel.default
                 value="name"
-                control={<Radio color="primary" />}
+                control={<Radio.default color="primary" />}
                 label="Name"
               />
-              <FormControlLabel
+              <FormControlLabel.default
                 value="subject"
-                control={<Radio color="primary" />}
+                control={<Radio.default color="primary" />}
                 label="Subject"
               />
-            </RadioGroup>
-          </FormControl>
-        </FormControl>
-        <TextField
+            </RadioGroup.default>
+          </FormControl.default>
+        </FormControl.default>
+        <TextField.default
           placeholder="Query string..."
           value={queryString}
           onChange={handleChange(setQueryString)}
           style={{ flex: 1 }}
         />
-        <Button
+        <Button.default
           className={classes.button}
           variant="contained"
           color="primary"
@@ -149,15 +149,15 @@ const Body = () => {
           onClick={handleQuery}
         >
           Query
-        </Button>
+        </Button.default>
       </Row>
-      <Paper variant="outlined">
+      <Paper.default variant="outlined">
         {messages.map((m, i) => (
-          <Typography variant="body2" key={m + i} style={{ color: m.color }}>
+          <Typography.default variant="body2" key={m + i} style={{ color: m.color }}>
             {m.message}
-          </Typography>
+          </Typography.default>
         ))}
-      </Paper>
+      </Paper.default>
     </Wrapper>
   );
 };
