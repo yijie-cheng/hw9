@@ -1,5 +1,5 @@
 import { Router } from "express";
-import ScoreCard from "../models/ScoreCard";
+import ScoreCard from "../models/ScoreCard.js";
 const router = Router();
 router.delete("/cards", (req, res) => {
     deleteCard(res);
