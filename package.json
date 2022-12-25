@@ -17,6 +17,7 @@
     "dotenv-defaults": "^2.0.2",
     "express": "^4.17.1",
     "mongoose": "^5.12.15",
+    "node-fetch": "^3.3.0",
     "nodemon": "^2.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

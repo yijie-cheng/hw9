@@ -4,7 +4,7 @@ import db from './backend/db.js'
 import routes from './backend/routes/index.js';
 import dotenv from "dotenv-defaults";
 dotenv.config();
-import wakeUpDyno from "./backend/route/wakeUpDyno.js";
+import wakeUpDyno from "./backend/routes/wakeUpDyno.js";
  
 const app = express();
 const port = process.env.PORT || 4000;
@@ -17,6 +17,6 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     const DYNO_URL = "https://my.app_A_heroku.com/"
     wakeUpDyno(DYNO_URL)
-    console.log(`Example app listening on port ${port}!`),
+    console.log(`Example app listening on port ${port}!`)
 });
 db.connect();
