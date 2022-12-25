@@ -26,15 +26,15 @@ const Row = styled.div`
   padding: 1em;
 `;
 
-const StyledFormControl = styled(FormControl)`
-  min-width: 120px;
-`;
+// const StyledFormControl = styled(FormControl)`
+//   min-width: 120px;
+// `;
 
-const ContentPaper = styled(Paper)`
-  height: 300px;
-  padding: 2em;
-  overflow: auto;
-`;
+// const ContentPaper = styled(Paper)`
+//   height: 300px;
+//   padding: 2em;
+//   overflow: auto;
+// `;
 
 const Body = () => {
   const classes = useStyles();
@@ -115,7 +115,7 @@ const Body = () => {
         </Button>
       </Row>
       <Row>
-        <StyledFormControl>
+        <FormControl>
           <FormControl component="fieldset">
             <RadioGroup
               row
@@ -134,7 +134,7 @@ const Body = () => {
               />
             </RadioGroup>
           </FormControl>
-        </StyledFormControl>
+        </FormControl>
         <TextField
           placeholder="Query string..."
           value={queryString}
@@ -151,13 +151,13 @@ const Body = () => {
           Query
         </Button>
       </Row>
-      <ContentPaper variant="outlined">
+      <Paper variant="outlined">
         {messages.map((m, i) => (
           <Typography variant="body2" key={m + i} style={{ color: m.color }}>
             {m.message}
           </Typography>
         ))}
-      </ContentPaper>
+      </Paper>
     </Wrapper>
   );
 };

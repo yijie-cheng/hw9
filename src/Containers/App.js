@@ -13,17 +13,17 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const StyledPaper = styled(Paper)`
-  padding: 2em;
-`;
+// const StyledPaper = styled(Paper)`
+//   padding: 2em;
+// `;
 
 function App() {
   return (
     <Wrapper>
-      <StyledPaper elevation={3}>
+      <Paper elevation={3}>
         <Header />
         <Body />
-      </StyledPaper>
+      </Paper>
     </Wrapper>
   );
 }
